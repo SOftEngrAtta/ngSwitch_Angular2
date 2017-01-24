@@ -1,8 +1,8 @@
-    <ul class="nav nav-pills">
-      <li [style.cursor]='pointer'><a (click)="viewMode = 'map'">Map View</a></li>
-      <li><a (click)="viewMode = 'list'">Map View</a></li>      
+<ul class="nav nav-pills">
+      <li [class.active]= "viewMode == 'map'" [style.cursor]='pointer'><a (click)="viewMode = 'map'">Map View</a></li>
+      <li [class.active]= "viewMode == 'list'"><a (click)="viewMode = 'list'">Map View</a></li>      
     </ul> 
     <div [ngSwitch]="viewMode">
       <h1 *ngSwitchCase="'map'">Map View Content</h1>
       <h1 *ngSwitchCase="'list'">List View Content</h1>    
-    </div>
+    </div> 
